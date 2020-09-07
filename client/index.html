@@ -7,16 +7,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
-  <body>
+  <body id="index">
     <div class="main">
-      <h1>African Startups WebScraper</h1>
+      <h1 class="main-title">African Startups WebScraper</h1>
       <div>
         <form action="post">
-          <label class="btn" for="jsonfile" id="selector"
+          <label class="main-btn" for="jsonfile" id="selector"
             >Select Config File</label
           >
           <input id="jsonfile" name="jsonfile" type="file" hidden />
-          <button class="btn" type="submit">Scrape</button>
+          <button id="scrape" class="main-btn" type="submit">Scrape</button>
         </form>
       </div>
       <div class="loading">
