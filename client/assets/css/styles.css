@@ -65,7 +65,7 @@ label.active {
   display: block;
   color: #242424;
 }
-.btn {
+.preview-btn {
   display: block;
   margin: 10px auto;
   padding: 16px 48px;
@@ -77,7 +77,7 @@ label.active {
   color: #242424;
   background-color: sandybrown;
 }
-.btn:hover {
+.preview-btn:hover {
   text-decoration: none;
   color: #f4a460;
   background-color: #242424;
