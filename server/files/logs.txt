@@ -1,10 +1,10 @@
-10 : 44 : 15 // scraper launched...
-10 : 44 : 43 // go to url : https://www.dakarstartup.com/article/view-startup?sh=jSTlJB4kwGyUAaM6hHCnFcm01tdgerkDzX9KpRIVfs3Z8d5iL2xP7bvuEoQYOWN&i=1&hs=k9gCt1kDGdlRbTPYcBEeuaAi04ZhJxQp6z5wrS27KUdsonF8XW
-10 : 44 : 46 // url : https://www.dakarstartup.com/article/view-startup?sh=jSTlJB4kwGyUAaM6hHCnFcm01tdgerkDzX9KpRIVfs3Z8d5iL2xP7bvuEoQYOWN&i=1&hs=k9gCt1kDGdlRbTPYcBEeuaAi04ZhJxQp6z5wrS27KUdsonF8XW was scraped successfully
-10 : 44 : 46 // go to url : https://www.dakarstartup.com/article/view-startup?sh=Pj7vefMscG3SKnxZDaoXQdVr0mBkk5uw2AWJ4NithTL1IClzHUF86p9YEObRydg&i=2&hs=TRNzdoQJHElj4gu7k1ViLXfZAI6x9WeGhY3MSd8Fmn0wCUDpts
-10 : 44 : 49 // url : https://www.dakarstartup.com/article/view-startup?sh=Pj7vefMscG3SKnxZDaoXQdVr0mBkk5uw2AWJ4NithTL1IClzHUF86p9YEObRydg&i=2&hs=TRNzdoQJHElj4gu7k1ViLXfZAI6x9WeGhY3MSd8Fmn0wCUDpts was scraped successfully
-10 : 44 : 49 // go to url : https://www.dakarstartup.com/article/view-startup?sh=5nQpdXH1uz8K2dyxGN9ZjPcSfOhFaTmYEW4kbtoMkLUIsJ03eBR6ADrgwVvl7Ci&i=3&hs=KkVvQsawd41fUMFdnNRZeWSiAOcPHuIzj0pBDo9ky6ghJ8LrlC
-10 : 44 : 51 // url : https://www.dakarstartup.com/article/view-startup?sh=5nQpdXH1uz8K2dyxGN9ZjPcSfOhFaTmYEW4kbtoMkLUIsJ03eBR6ADrgwVvl7Ci&i=3&hs=KkVvQsawd41fUMFdnNRZeWSiAOcPHuIzj0pBDo9ky6ghJ8LrlC was scraped successfully
-10 : 44 : 51 // go to url : https://www.dakarstartup.com/article/view-startup?sh=pJA9t8klrOVB3gYf5oenzEhmS04uc6INP1wyTFRGviDMkZWjd7Q2UxKbCasHLXd&i=4&hs=6laV7nFkpJhmt8TGc30vNCOQSe2wzHYkDrBfAodE4Py5jL1xZg
-10 : 44 : 53 // url : https://www.dakarstartup.com/article/view-startup?sh=pJA9t8klrOVB3gYf5oenzEhmS04uc6INP1wyTFRGviDMkZWjd7Q2UxKbCasHLXd&i=4&hs=6laV7nFkpJhmt8TGc30vNCOQSe2wzHYkDrBfAodE4Py5jL1xZg was scraped successfully
-10 : 44 : 54 // scraper finished
+15 : 5 : 1 // scraper launched...
+15 : 6 : 24 // go to url : https://nguvu.africa/insights/profile?p=859
+15 : 6 : 27 // url : https://nguvu.africa/insights/profile?p=859 was scraped successfully
+15 : 6 : 27 // go to url : https://nguvu.africa/insights/profile?p=779
+15 : 6 : 28 // url : https://nguvu.africa/insights/profile?p=779 was scraped successfully
+15 : 6 : 28 // go to url : https://nguvu.africa/insights/profile?p=780
+15 : 6 : 29 // url : https://nguvu.africa/insights/profile?p=780 was scraped successfully
+15 : 6 : 29 // go to url : https://nguvu.africa/insights/profile?p=1004
+15 : 6 : 30 // url : https://nguvu.africa/insights/profile?p=1004 was scraped successfully
+15 : 6 : 31 // scraper finished
