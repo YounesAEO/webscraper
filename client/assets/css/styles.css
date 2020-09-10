@@ -10,10 +10,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 /* main page */
-#index {
+.index {
   background-color: #242424;
 }
 .main {
@@ -23,6 +24,7 @@ h1 {
   margin: 48px auto;
 }
 .main-title {
+  text-align: center;
   color: burlywood;
 }
 
@@ -81,4 +83,21 @@ label.active {
   text-decoration: none;
   color: #f4a460;
   background-color: #242424;
+}
+
+/* configForm page*/
+.config-label {
+  color: #ccc;
+  font-weight: bold;
+}
+
+.custom-control-label {
+  color: #ccc;
+}
+.data-field {
+  color: sandybrown;
+  font-size: 32px;
+}
+.toggle-off.btn {
+  padding-left: 2px;
 }

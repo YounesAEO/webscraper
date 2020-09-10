@@ -1,10 +1,10 @@
-15 : 5 : 1 // scraper launched...
-15 : 6 : 24 // go to url : https://nguvu.africa/insights/profile?p=859
-15 : 6 : 27 // url : https://nguvu.africa/insights/profile?p=859 was scraped successfully
-15 : 6 : 27 // go to url : https://nguvu.africa/insights/profile?p=779
-15 : 6 : 28 // url : https://nguvu.africa/insights/profile?p=779 was scraped successfully
-15 : 6 : 28 // go to url : https://nguvu.africa/insights/profile?p=780
-15 : 6 : 29 // url : https://nguvu.africa/insights/profile?p=780 was scraped successfully
-15 : 6 : 29 // go to url : https://nguvu.africa/insights/profile?p=1004
-15 : 6 : 30 // url : https://nguvu.africa/insights/profile?p=1004 was scraped successfully
-15 : 6 : 31 // scraper finished
+17 : 46 : 15 // scraper launched...
+17 : 47 : 39 // go to url : https://nguvu.africa/insights/profile?p=859
+17 : 47 : 47 // url : https://nguvu.africa/insights/profile?p=859 was scraped successfully
+17 : 47 : 47 // go to url : https://nguvu.africa/insights/profile?p=779
+17 : 47 : 48 // url : https://nguvu.africa/insights/profile?p=779 was scraped successfully
+17 : 47 : 48 // go to url : https://nguvu.africa/insights/profile?p=780
+17 : 47 : 49 // url : https://nguvu.africa/insights/profile?p=780 was scraped successfully
+17 : 47 : 49 // go to url : https://nguvu.africa/insights/profile?p=1004
+17 : 47 : 50 // url : https://nguvu.africa/insights/profile?p=1004 was scraped successfully
+17 : 47 : 52 // scraper finished
