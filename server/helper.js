@@ -1,3 +1,22 @@
+const fs = require("fs");
+//function for creating log files
+function log(filename, message) {
+  const output = fs.createWriteStream(`./files/${filename}.log`, {
+    flags: "a",
+  });
+  const currentTime = new Date();
+  const log = new console.Console(output);
+  log.log(
+    currentTime.getHours() +
+      ":" +
+      currentTime.getMinutes() +
+      ":" +
+      currentTime.getSeconds() +
+      " // " +
+      message +
+      "\n"
+  );
+}
 //get property value of an html element.
 //arguments are the page context and the xpath of the element and html attribute
 async function getPropertyValue(page, x, prop) {
@@ -155,3 +174,4 @@ exports.getPropertyValues = getPropertyValues;
 exports.removeDefaults = removeDefaults;
 exports.removeUnwanted = removeUnwanted;
 exports.getAttachedElements = getAttachedElements;
+exports.log = log;

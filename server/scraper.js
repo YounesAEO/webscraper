@@ -5,14 +5,13 @@ const {
   getPropertyValues,
   removeUnwanted,
   getAttachedElements,
+  log,
 } = require("./helper");
 
 async function scrapeProduct(config) {
   let scrapedData = [];
-  let currentTime = new Date();
-  let log = "";
   console.log("scraper launched...");
-  log += `${currentTime.getHours()} : ${currentTime.getMinutes()} : ${currentTime.getSeconds()} // scraper launched...\n`;
+  log(config.website_name, "scraper launched...");
   const browser = await puppeteer.launch({
     headless: false /*, args: ['--start-fullscreen']*/,
   });
@@ -71,10 +70,7 @@ async function scrapeProduct(config) {
   //go to each link in urls and scrape data from it
   for (let i = 0; i < 4 /*urls.length*/; i++) {
     console.log("go to url : " + urls[i]);
-    currentTime = new Date();
-    log += `${currentTime.getHours()} : ${currentTime.getMinutes()} : ${currentTime.getSeconds()} // go to url : ${
-      urls[i]
-    }\n`;
+    log(config.website_name, `go to url : ${urls[i]}`);
     await page.goto(urls[i], { timeout: 240000, waitUntil: "networkidle0" });
     await page.waitFor(config.params.slowScraping);
     let startupData = [];
@@ -155,15 +151,10 @@ async function scrapeProduct(config) {
     }
     scrapedData.push(startup);
     console.log(`url : ${urls[i]} scraped successfully`);
-    currentTime = new Date();
-    log += `${currentTime.getHours()} : ${currentTime.getMinutes()} : ${currentTime.getSeconds()} // url : ${
-      urls[i]
-    } was scraped successfully\n`;
+    log(config.website_name, `url : ${urls[i]} scraped successfully`);
   }
   await browser.close();
-  currentTime = new Date();
-  log += `${currentTime.getHours()} : ${currentTime.getMinutes()} : ${currentTime.getSeconds()} // scraper finished\n`;
-  fs.writeFileSync("./files/logs.txt", log);
+  log(config.website_name, "scraper finished");
   return scrapedData;
 }
 
