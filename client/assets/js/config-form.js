@@ -1,3 +1,24 @@
+const exportJSON = (obj, title) => {
+  try {
+    const jsonContent =
+      "data:application/json;charset=utf-8," + JSON.stringify(obj);
+    const encodedUri = encodeURI(jsonContent);
+    const a = document.createElement("a");
+    a.href = encodedUri;
+    a.target = "_blank";
+    a.download = `${title}.json`;
+    const clickHandler = () => {
+      setTimeout(() => {
+        a.removeEventListener("click", clickHandler);
+      }, 150);
+    };
+    a.addEventListener("click", clickHandler, false);
+    a.click();
+  } catch (err) {
+    alert("something went wrong");
+  }
+};
+
 $(() => {
   $(".loading").css("display", "none");
   //rendering data fields
@@ -106,6 +127,7 @@ $(() => {
       <input
         type="text"
         class="form-control"
+        value="--"
         name="default-value${i + 1}"
         id="default-value${i + 1}"
         placeholder="value when data not found..."
@@ -136,7 +158,7 @@ $(() => {
         <div class="custom-control custom-radio custom-control-inline">
           <input
             type="radio"
-            value=false
+            value="false"
             id="multiple-values-radio-false${i + 1}"
             name="multiple-values-radio-true${i + 1}"
             class="custom-control-input"
@@ -159,7 +181,7 @@ $(() => {
         >
           <input
             type="radio"
-            value=true
+            value="true"
             id="splittable-radio-true${i + 1}"
             name="splittable-radio-true${i + 1}"
             class="custom-control-input"
@@ -173,7 +195,7 @@ $(() => {
         <div class="custom-control custom-radio custom-control-inline">
           <input
             type="radio"
-            value=false
+            value="false"
             id="splittable-radio-false${i + 1}"
             name="splittable-radio-true${i + 1}"
             class="custom-control-input"
@@ -226,7 +248,7 @@ $(() => {
   for (let i = 0; i < fields.length; i++) {
     $(`#switch${i + 1}`).on("change", () => {
       $(`.data-form${i + 1}`).toggle(500, () => {
-        $(`.data-form${i + 1} :input`).val("");
+        $(`.data-form${i + 1}:input`).val("");
       });
     });
   }
@@ -336,9 +358,6 @@ $(() => {
       params,
       data,
     };
-    window.open(
-      "data:text/json;charset=utf-8," +
-        encodeURIComponent(JSON.stringify(config))
-    );
+    exportJSON(config, `${website_name}-config`);
   });
 });
