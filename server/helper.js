@@ -1,8 +1,8 @@
 const fs = require("fs");
 //function for creating log files
-function log(filename, message) {
+function log(filename, message, flag = "a") {
   const output = fs.createWriteStream(`./files/${filename}.log`, {
-    flags: "a",
+    flags: flag,
   });
   const currentTime = new Date();
   const log = new console.Console(output);
