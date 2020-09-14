@@ -1,6 +1,6 @@
 console.log("Working...");
 
-const API_URL = "http://localhost:5000/config";
+const API_URL = "http://localhost:5000/scrape";
 
 const form = document.querySelector("form");
 const loading = document.querySelector(".loading");
@@ -23,7 +23,6 @@ const loader = (e) => {
 let fileInput = document.getElementById("jsonfile");
 fileInput.addEventListener("change", loader);
 
-loading.style.display = "none";
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
   const formData = new FormData(form);
@@ -43,8 +42,9 @@ form.addEventListener("submit", async (event) => {
     let scrapedData = await response.json();
     console.log(scrapedData);
     sessionStorage.setItem("scrapedData", JSON.stringify(scrapedData));
+    sessionStorage.setItem("config", content);
     window.location.href = "./preview.html";
   } else {
-    console.error("config file is not a json file");
+    alert("config file is not a json file");
   }
 });
