@@ -1,6 +1,10 @@
 const startups = JSON.parse(sessionStorage.getItem("scrapedData"));
+const config = JSON.parse(sessionStorage.getItem("config"));
 console.log(startups);
 $(function () {
+  //assign log file url to log button
+  $("#log").attr("href", `http://localhost:5000/log/${config.website_name}`);
+
   var cols = Object.keys(startups[0]);
 
   // Create a table element
