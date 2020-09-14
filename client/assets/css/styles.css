@@ -12,6 +12,12 @@ body {
   align-items: center;
   flex-wrap: wrap;
 }
+a,
+button,
+input,
+label {
+  cursor: pointer;
+}
 
 /* main page */
 .index {
@@ -28,7 +34,8 @@ h1 {
   color: burlywood;
 }
 
-.main-btn {
+.main-btn,
+.main-btn-v2 {
   display: block;
   padding: 16px 48px;
   text-align: center;
@@ -79,7 +86,9 @@ label.active {
   color: #242424;
   background-color: sandybrown;
 }
-.preview-btn:hover {
+#log:hover,
+.preview-btn:hover,
+.main-btn-v2:hover {
   text-decoration: none;
   color: #f4a460;
   background-color: #242424;
@@ -100,4 +109,19 @@ label.active {
 }
 .toggle-off.btn {
   padding-left: 2px;
+}
+/* index 2 */
+.website-name {
+  color: sandybrown;
+  text-align: center;
+}
+
+.main-btn-v2 a {
+  text-decoration: none;
+  color: #f4a460;
+}
+
+.website-url {
+  color: white;
+  text-align: center;
 }
