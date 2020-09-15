@@ -31,10 +31,27 @@ router.post("/", async (req, res, next) => {
   }
 });
 
-router.put("/:id", (req, res, next) => {
-  res.json({
-    message: "Update one",
-  });
+router.put("/:id", async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const item = await scraper_configs.findOne({
+      _id: id,
+    });
+    if (!item) return next();
+    const updated = await scraper_configs.update(
+      {
+        _id: id,
+      },
+      { $set: req.body }
+    );
+    res.json({
+      message: "Successfully updated",
+      updated: updated,
+      updated_val: req.body,
+    });
+  } catch (error) {
+    next(error);
+  }
 });
 
 router.delete("/:id", async (req, res, next) => {
