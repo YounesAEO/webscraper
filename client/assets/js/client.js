@@ -1,6 +1,6 @@
 console.log("Working...");
 
-const API_URL = "http://localhost:5000/scrape";
+const API_URL = "http://localhost:5000/api/scrape";
 
 const form = document.querySelector("form");
 const loading = document.querySelector(".loading");

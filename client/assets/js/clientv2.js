@@ -1,5 +1,5 @@
 $(async () => {
-  let response = await fetch(`http://localhost:5000/configs/`);
+  let response = await fetch(`http://localhost:5000/api/configs/`);
   let data = await response.json();
   for (let element of data) {
     let template = `<div class="row">
