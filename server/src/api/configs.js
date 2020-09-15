@@ -2,7 +2,7 @@ const express = require("express");
 const monk = require("monk");
 
 const router = express.Router();
-const db = monk("localhost/data-scraping");
+const db = monk(process.env.MONGO_URI);
 const scraper_configs = db.get("configs");
 router.get("/", async (req, res, next) => {
   try {
@@ -14,35 +14,39 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-router.get("/:id", (req, res) => {
+router.get("/:id", (req, res, next) => {
   try {
     res.json({ message: "READ One" });
-  } catch (error) {}
+  } catch (error) {
+    next(error);
+  }
 });
 
-router.post("/", async (req, res) => {
+router.post("/", async (req, res, next) => {
   try {
     const inserted = await scraper_configs.insert(req.body);
     res.json(inserted);
   } catch (error) {
-    console.log(error);
+    next(error);
   }
 });
 
-router.put("/:id", (req, res) => {
+router.put("/:id", (req, res, next) => {
   res.json({
     message: "Update one",
   });
 });
 
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", async (req, res, next) => {
   try {
     const { id } = req.params;
     await scraper_configs.remove({
       _id: id,
     });
     res.json({ message: "deleted successfully" });
-  } catch (error) {}
+  } catch (error) {
+    next(error);
+  }
 });
 
 module.exports = router;

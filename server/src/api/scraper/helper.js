@@ -1,9 +1,10 @@
 const fs = require("fs");
 //function for creating log files
 function log(filename, message, flag = "a") {
-  const output = fs.createWriteStream(`./files/${filename}.log`, {
+  const output = fs.createWriteStream(`./src/files/${filename}.log`, {
     flags: flag,
   });
+
   const currentTime = new Date();
   const log = new console.Console(output);
   log.log(
